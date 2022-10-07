@@ -1,0 +1,37 @@
+Lesson 16 - Middleware
+
+Set up middelware `const logger` in server.js.  Added a variable hello to the req object
+Used `app.use(logger)` to instruct app to use the middleware in server.js
+Added 'hello' data to exports.getBootcamps in /controllers/bootcamps.js to illustrate passing data from middleware (deleted)
+Added a second logger to log to console the req method, protocol, host and URL
+Created /middleware and logger.js file to move logging into that file and directory
+Exported the logger.js file with module.exports = logger in the logger.js file
+Added the logger to server.js with const logger = require('./middleware/logger');
+Installed morgan node logger
+
+
+
+Lesson 15 - Creating Controller Methods
+
+Set up controllers directory
+Created bootcamps.js in controllers directory
+Moved routes & responses rom /routes/bootcamps.js to  /controllers/bootcamps.js
+Added `const { getBootcamp,getBootcamps,createBootcamp,updateBootcamp,deleteBootcamp,} = require('../controllers/bootcamps');` to import controllers to /routes/bootcamps.js
+Set up routes to the controllers with router.route statements in /routes/bootcamps.js
+
+
+Lesson 14 - Setup Express Router
+
+Use Express router.  Set up router directory and bootcamps.js in that directory
+Moved all routes from server.js to bootcamps.js
+Initialized Express and the router in bootcamps.js
+Added route files to server.js with `const bootcamps`
+Mounted router to the urls with app.use() in server.js
+Updated and shorted URL's in bootcamps.js per route definition in server.js
+Exported router in bootcamps.js with module.exports = router; 
+
+Lesson 13 - Creating Routes and Responses
+
+Added a first route to '/'
+Worked with a number of responses
+Set up routes for GET, POST, PUT, DELETE

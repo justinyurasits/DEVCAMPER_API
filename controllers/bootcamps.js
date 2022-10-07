@@ -1,24 +1,38 @@
 // @desc    Get all bootcamps
 // @route   GET /api/v1/bootcamps
 // @access  Public
+//this was to show how you can pull data from your middleware into the controller with  `hello`
+/* exports.getBootcamps = (req, res, next) => {
+  res.status(200).json({
+    success: true,
+    msg: 'Show all Bootcamps',
+    hello: req.hello,
+  });
+}; */
+
+// @desc    Get all bootcamps
+// @route   GET /api/v1/bootcamps
+// @access  Public
 exports.getBootcamps = (req, res, next) => {
-  res.status(200).json({ success: true, data: { msg: 'Show all Bootcamps' } });
+  res.status(200).json({
+    success: true,
+    msg: 'Show all Bootcamps',
+    hello: req.hello,
+  });
 };
 
 // @desc    Get single bootcamps
 // @route   GET /api/v1/bootcamps/:id
 // @access  Public
 exports.getBootcamp = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, data: { msg: `Get bootcamp ${req.params.id}` } });
+  res.status(200).json({ success: true, msg: `Get bootcamp ${req.params.id}` });
 };
 
 // @desc    Create new bootcamp
 // @route   POST /api/v1/bootcamps
 // @access  Private
 exports.createBootcamp = (req, res, next) => {
-  res.status(200).json({ success: true, data: { msg: 'Create new Bootcamp' } });
+  res.status(200).json({ success: true, msg: 'Create new Bootcamp' });
 };
 
 // @desc    Update bootcamp
@@ -27,7 +41,7 @@ exports.createBootcamp = (req, res, next) => {
 exports.updateBootcamp = (req, res, next) => {
   res.status(200).json({
     success: true,
-    data: { msg: `Update bootcamp ${req.params.id}` },
+    msg: `Update bootcamp ${req.params.id}`,
   });
 };
 
@@ -37,5 +51,5 @@ exports.updateBootcamp = (req, res, next) => {
 exports.deleteBootcamp = (req, res, next) => {
   res
     .status(200)
-    .json({ success: true, data: { msg: `Delete bootcamp ${req.params.id}` } });
+    .json({ success: true, msg: `Delete bootcamp ${req.params.id}` });
 };

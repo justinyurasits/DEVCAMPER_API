@@ -1,5 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
+//const logger = require('./middleware/logger');  this was just an example
+const morgan = require('morgan');
 
 //Route files
 const bootcamps = require('./routes/bootcamps');
@@ -8,6 +10,22 @@ const bootcamps = require('./routes/bootcamps');
 dotenv.config({ path: './config/config.env' });
 
 const app = express();
+
+//Setting up example middleware creating hello data on a req/res event
+/* const logger = (req, res, next) => {
+  req.hello = 'Hello World'; //Creating this variable gives you access to it in your routes
+  console.log('Middleware Ran');
+  //All middleware requires next(), which instructs the middleware to move on
+  next();
+}; */
+
+//this was to demo middleware
+//app.use(logger);
+
+//Dev logging middleware
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 
 //Mount routers
 app.use('/api/v1/bootcamps', bootcamps); //connects the router app.use with the bootcamps const above.
