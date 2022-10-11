@@ -1,3 +1,33 @@
+Lesson 19 - Install Mongoose
+
+Mongoose.js docs  - Read them
+Install Mongoose into local project with 'npm install mongoose'
+Add db.js to config folder, require Mongoose, set async function to connect to db
+MongoDB.com > connect to your application -> Copy the connection string
+Add connection string to config.env, make it an environment variable
+Update 'connectDB' in db.js, call MONGO_URI, add statements to elminate errors
+Log connection to console in db.js
+Export db.js with `module.exports`
+Required connectDB in server.js
+Call connection to DB with `connectDB()` in server.js
+Moved app.listen into const=server in server.js
+Set up handler for unhandled promise rejections in server.js 
+
+
+
+Lesson 18 - Install MongoDB
+
+MongoDB ONLY.  No code changes. 
+Established a MongoDB account
+Set an initial free-tier cluster on AWS
+Cluster name is 'Cluster0'
+Username is yurasits, password is Chrome generated
+Set up network access to be limited to my at-home local IP address
+Set up connect using MongoDB Compass.  Installed Compass locally.
+Connected local MongoDB compass app to the cloud based version of Mongo. 
+
+Lesson 17 - Postman ONLY - No code in this lesson
+
 Lesson 16 - Middleware
 
 Set up middelware `const logger` in server.js.  Added a variable hello to the req object
