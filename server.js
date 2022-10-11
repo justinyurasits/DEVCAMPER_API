@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 //const logger = require('./middleware/logger');  this was just an example
 const morgan = require('morgan');
 const connectDB = require('./config/db.js');
+const colors = require('colors');
 
 //Load environment variables
 dotenv.config({ path: './config/config.env' });
@@ -38,12 +39,14 @@ const PORT = process.env.PORT || 5001;
 
 const server = app.listen(
   PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
 );
 
 //Handle unhandled promise rejections
 process.on('unhandledRejection', (err, promise) => {
-  console.log(`Error: ${err.message}`);
+  console.log(`Error: ${err.message}`.red);
   //close server and exit process
   server.close(() => process.exit(1));
 });
