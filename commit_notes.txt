@@ -4,11 +4,11 @@ Start with basic CRUD functionality
 Bring Bootcamp model into /controllers/bootcamps.js with `const Bootcamp = require('../models/Bootcamp')`
 Set `console.log(req.body)` in controllers/bootcamps.js exports.createBootcamp to examine incoming reqeusts 
 Create a header preset type in Postman `Key:Content-Type, Value: application/json`
-Send inbound request with sample bootcamp dat from /_data/bootcamps.json.  Doesn't work. 
+Send inbound request with sample bootcamp data from /_data/bootcamps.json.  Doesn't work. 
 Add body parser to server.js with `app.use(express.json())`
 Comment out `console` and `res.staus` from `exports.createBootcamp`
 Turn `exports.createBootcamp` into async call to bootcamps and return 201 status on success
-
+Added four bootcamps to database using Postman Create Bootcamp and data from /_data/bootcamps.json
 
 
 Lesson 21 - Create First Data Model
