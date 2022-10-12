@@ -1,3 +1,33 @@
+Lesson 22 - Create Bootcamp
+
+Start with basic CRUD functionality 
+Bring Bootcamp model into /controllers/bootcamps.js with `const Bootcamp = require('../models/Bootcamp')`
+Set `console.log(req.body)` in controllers/bootcamps.js exports.createBootcamp to examine incoming reqeusts 
+Create a header preset type in Postman `Key:Content-Type, Value: application/json`
+Send inbound request with sample bootcamp dat from /_data/bootcamps.json.  Doesn't work. 
+Add body parser to server.js with `app.use(express.json())`
+Comment out `console` and `res.staus` from `exports.createBootcamp`
+Turn `exports.createBootcamp` into async call to bootcamps and return 201 status on success
+
+
+
+Lesson 21 - Create First Data Model
+
+Import _data folder with sample data structures from project resources folder
+Create models directory and Bootcamp.js file in the directory
+Require mongoose, set new schema in Bootcamp.js
+Add schema elements, name, slug (url-friendly name), website, phone, address, location, careers
+Export the module with `module.exports` in Bootcamp.js
+
+
+Lesson 20 - Colors In The console
+
+npm install Colors
+Require colors in server.js
+On `const server = app.listen` in server.js, add .yellow.bold to the  'Server running' console message. 
+On `process.on('unhandledRejection'` in server.js, add .red
+On `console.log` in db.js, add .cyan.underline.bold
+
 Lesson 19 - Install Mongoose
 
 Mongoose.js docs  - Read them
@@ -12,8 +42,6 @@ Required connectDB in server.js
 Call connection to DB with `connectDB()` in server.js
 Moved app.listen into const=server in server.js
 Set up handler for unhandled promise rejections in server.js 
-
-
 
 Lesson 18 - Install MongoDB
 

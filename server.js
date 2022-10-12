@@ -16,6 +16,9 @@ const bootcamps = require('./routes/bootcamps');
 
 const app = express();
 
+//Body Parser
+app.use(express.json());
+
 //Setting up example middleware creating hello data on a req/res event
 /* const logger = (req, res, next) => {
   req.hello = 'Hello World'; //Creating this variable gives you access to it in your routes
