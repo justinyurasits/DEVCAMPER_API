@@ -1,3 +1,8 @@
+Lesson 24 - Update and Delete Bootcamps with PUT and DELETE
+
+Add try/catch blocks and error conditions to update and delete actions of bootcamp in /controllers/bootcamps.js
+
+
 Lesson 23 - Fetch Bootcamps - GET
 
 Add try/catch block for response to GET to exports.getBootcamps in /controllers/bootcamps.js
