@@ -1,3 +1,14 @@
+Lesson 26 - Custom ErrorResponse Class
+
+Create utils directory and /utils/errorResponse.js
+Create a ErrorResponse class and export it
+In /middleware/error.js, update the res.status to use err.statusCode || 500
+Bring in ErrorResponse into /controllers/bootcamps.js
+Update next(err) in getBootcamp with `next(new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404));`
+
+
+
+
 Lesson 25 - Error Handling Middleware
 
 Add Express native error handling methods with async functions
