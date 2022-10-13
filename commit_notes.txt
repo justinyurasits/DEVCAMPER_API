@@ -1,3 +1,14 @@
+Lesson 25 - Error Handling Middleware
+
+Add Express native error handling methods with async functions
+Add next(err) to export.getBootcamp in /controllers/bootcamps.js
+Run test by sending malformed bootcamp ID, validate that next(err) returns html
+Change next(err) behaivor by creating custom JSON handler in new file /middleware/error.js
+Add `const errorHandler = require('./middleware/error')` to server.js
+Add `app.use(errorHandler)` to server.js AFTER routers are mounted 
+
+
+
 Lesson 24 - Update and Delete Bootcamps with PUT and DELETE
 
 Add try/catch blocks and error conditions to update and delete actions of bootcamp in /controllers/bootcamps.js
