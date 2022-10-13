@@ -1,3 +1,19 @@
+Lesson 27 - Mongoose Error Handling 1
+
+Move specific error handling to error handlier and remove from controllers catch statements
+In /middleware/error.js, do the following:
+  Create handling for error name `CastError`
+  Make copy of error with `let error = {...err}'
+  Add `error = new ErrorResponse(message, 404);`
+  Bring in Error Response with `const ErrorResponse = require("../utils/errorResponse");`
+
+In /controllers/bootcamps:
+  Restore catch(err) next statements to next(err)
+  Add `return next(
+        new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404)
+      );` to Delete, Get, Update bootcamp controllers `if(!bootcamp)` statement. 
+
+
 Lesson 26 - Custom ErrorResponse Class
 
 Create utils directory and /utils/errorResponse.js
@@ -5,8 +21,6 @@ Create a ErrorResponse class and export it
 In /middleware/error.js, update the res.status to use err.statusCode || 500
 Bring in ErrorResponse into /controllers/bootcamps.js
 Update next(err) in getBootcamp with `next(new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404));`
-
-
 
 
 Lesson 25 - Error Handling Middleware
