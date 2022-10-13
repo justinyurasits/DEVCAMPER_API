@@ -1,3 +1,10 @@
+Lesson 23 - Fetch Bootcamps - GET
+
+Add try/catch block for response to GET to exports.getBootcamps in /controllers/bootcamps.js
+Add try/catch block for response to GET to exports.getBootcamp in /controllers/bootcamps.js
+Add error handling to exports.getBootcamp for correclty formated bootcamp name that does not exist
+
+
 Lesson 22 - Create Bootcamp
 
 Start with basic CRUD functionality 
