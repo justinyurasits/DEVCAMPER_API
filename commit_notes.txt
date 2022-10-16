@@ -1,3 +1,13 @@
+Lesson 29 - Async/Await Middleware
+
+Add new file /middleware/async.js
+Add asyncHandler to async.js
+Require asyncHandler in /controllers/bootcamps.js
+Delete all try/catch blocks in /controllers/bootcamps.js
+Wrap async statements in `asyncHandler`
+
+
+
 Lesson 28 - Mongoose Error Handling 2 
 
 Add additional conditional error handlers to /middleware/error.js to check for duplicate and validation errors. 
