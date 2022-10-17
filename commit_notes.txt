@@ -1,3 +1,13 @@
+Lesson 30 - Mongoose Middleware & Slugify
+
+Installed slugify package
+Required slugify in /models/Bootcamp.js
+Created a slug with BootcampSchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
+});
+
+
 Lesson 29 - Async/Await Middleware
 
 Add new file /middleware/async.js
